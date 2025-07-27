@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 import BannerBackground from "../Assets/home-banner-background.png";
 import BannerImage from "../Assets/home-banner-image.png";
 import Navbar from "./Navbar";
@@ -27,6 +28,17 @@ const Home = () => {
         <div className='home-image-conatiner'>
           <img src={BannerImage} alt="" />
         </div>
+      </div>
+
+      <div style={{ marginTop: '30px' }}>
+        <h2>Menu Items from Backend:</h2>
+        <ul>
+          {menuItemClasses.map((item, index) => (
+            <li key={index}>
+              <strong>{item.name}</strong> - {item.price}
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   ); 

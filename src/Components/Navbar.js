@@ -13,6 +13,7 @@ import {
 import List from "@mui/material/List";
 import HomeIcon from "@mui/icons-material/Home";
 import InfoIcon from "@mui/icons-material/Info";
+import MenuIcon from "@mui/icons-material/Menu";
 import CommentRoundedIcon from "@mui/icons-material/CommentRounded";
 import PhoneRoundedIcon from "@mui/icons-material/PhoneRounded";
 import ShoppingCartRoundedIcon from "@mui/icons-material/ShoppingCartRounded";
@@ -26,16 +27,16 @@ const Navbar = () => {
       icon: <HomeIcon />,
     },
     {
+      text: "Menu",
+      icon: <MenuIcon />,
+    },
+    {
       text: "About",
       icon: <InfoIcon />,
     },
     {
       text: "Testimonials",
       icon: <CommentRoundedIcon />,
-    },
-    {
-      text: "Contact",
-      icon: <PhoneRoundedIcon />,
     },
     {
       text: "Cart",
@@ -49,6 +50,7 @@ const Navbar = () => {
       </div>
       <div className="navbar-links-container">
         <a href="">Home</a>
+        <a href="">Menu</a>
         <a href="">About</a>
         <a href="">Testimonials</a>
         <a href="">Contact</a>
@@ -57,6 +59,11 @@ const Navbar = () => {
         </a>
         <button className="primary-button">Bookings Now</button>
       </div>
+      <div className="navbar-menu-container">
+         <MenuIcon 
+        onClick={() => setOpenMenu(true)} 
+         style={{ cursor: "pointer", fontSize: "2rem" }} /> 
+      </div>
       <div className="navbar-menu-container">
         <HiOutlineBars3 onClick={() => setOpenMenu(true)} />
       </div>
